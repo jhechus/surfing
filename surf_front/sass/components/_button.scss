@@ -1,0 +1,15 @@
+.btn{
+    font-size: 25px;
+    font-weight: 700;
+    line-height:  29.3px;
+
+    &--small{
+        padding: 1rem 1.8rem;
+        border-radius: 25px;
+    }
+
+    &--black {
+        background-color: black;
+        color: #FFF;
+    }
+}
