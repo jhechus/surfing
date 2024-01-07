@@ -3,6 +3,7 @@ import Link from "next/link"
 
 const Footer = () => {
 
+     // Arreglo de elementos de navegación con propiedades de pantalla y ruta
     const navItems = [
         {
             display: 'the camp',
@@ -22,6 +23,7 @@ const Footer = () => {
         },
     ];
 
+     // Arreglo con propiedades de pantalla y ruta
     const policies = [
         {
             display: 'Imprint',
@@ -49,10 +51,10 @@ const Footer = () => {
                 height={123} // Alto de la imagen en píxeles
             />
             <ul className="footer_links">
-                {navItems.map((item) => (
-                    <li key={item.slug}>
-                        <Link href={item.slug}>
-                            <h5> {item.display} </h5>
+                {navItems.map((item) => ( // Mapea cada elemento del arreglo navItems
+                    <li key={item.slug}> {/* Crea un elemento de lista con una clave única */}
+                        <Link href={item.slug}> {/* Utiliza el componente de enlace de Next.js para enrutar con el slug de la constante */}
+                            <h5> {item.display} </h5> {/* Muestra el texto del elemento de navegación */}
                         </Link>
                     </li>
                 ))}
@@ -61,8 +63,8 @@ const Footer = () => {
 
         <div className="footer_policies">
             <ul className="footer_policies-nav">
-                {policies.map((policiy) => (
-                    <li key={policiy.slug}>
+                {policies.map((policiy) => (    
+                    <li key={policiy.slug}>     
                         <p className="copy"> {policiy.display} </p>
                     </li>
                 ))}

@@ -1,8 +1,10 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
-
+  const path = usePathname();
     const navItems = [
         {
             display: 'the camp',
@@ -19,7 +21,9 @@ const Header = () => {
     ]
 
   return (
-    <header className='header'>
+    <header 
+      className={`header ${path === '/experience' ? 'header-light' : ''}`}
+    >
       <Image
         className='header_logo'
         src='/assets/logo.svg' // Ruta relativa al archivo de imagen
